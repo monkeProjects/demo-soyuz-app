@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en-EN" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>СоюзМультПарк</title>
+
+  <!-- Иконка -->
+  <link rel="icon" href="icon.png" type="image/png" />
+  <!-- Стили -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- WebARRocksObject MAIN SCRIPT -->
+  <script src="thirdparty/WebARRocks/dist/WebARRocksObject.js"></script>
+  <!-- MEDIASTREAMAPI HELPER -->
+  <script src="thirdparty/WebARRocks/helpers/WebARRocksMediaStreamAPIHelper.js"></script>
+  <!-- MAIN SCRIPT : -->
+  <script src="src/main.js"></script>
+</head>
+
+<body onload="main()">
+  <div class="app-container">
+    <!-- Загрузочный экран -->
+    <div class="loading-screen" id="loadingScreen">
+      <div>
+        <div class="loading-spinner"></div>
+        <div>Загружаем AR...</div>
+      </div>
+    </div>
+
+    <!-- Canvas для AR -->
+    <canvas id="camera-view"></canvas>
+
+    <!-- Вспышка -->
+    <div class="flash-overlay" id="flashOverlay"></div>
+
+    <!-- Кнопка фото -->
+    <button class="capture-button glass" id="captureBtn"></button>
+
+    <!-- Баннер перехода -->
+    <div class="side-banner glass">
+      <a href="https://souzmultpark.ru/" target="_blank"> 👀 другие фигуры</a>
+    </div>
+
+    <!-- Уведомление “Фото сделано” -->
+    <div class="photo-notice" id="photoNotice">Фото сделано!</div>
+
+    <script src="src/overlay.js"></script>
+  </div>
+</body>
+
+</html>
