@@ -2,11 +2,16 @@
 
 First internal demo of soyuzapp
 
-To run it you can use simple python server:
+Because three js requiere vite for some reason now we are working with vite.
+To run the app you can run
 
 ```sh
-    python -m http.server 8080
+    npx vite --port 8080
 ```
 
-And go to <http://localhost:8080>.
-You should turn on unsafe flag in google chrome that enables camera on http servers. (for safety only enable for localhost:8080)
+To test app on your phone you need to expose ports in your local net.
+To do so run:
+
+```sh
+     npx vite --port 8080 --host
+```

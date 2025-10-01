@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('captureBtn').addEventListener('click', () => {
-    const screenshotTarget = document.getElementById('camera-view');
+    const screenshotTarget = document.getElementById('user-view');
     if (!screenshotTarget) return;
 
     html2canvas(screenshotTarget).then((canvas) => {

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="content-language" content="en-EN" />
   <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>СоюзМультПарк</title>
 
   <!-- Иконка -->
@@ -14,12 +14,20 @@
   <link rel="stylesheet" href="style.css" />
   <!-- WebARRocksObject MAIN SCRIPT -->
   <script src="thirdparty/WebARRocks/dist/WebARRocksObject.js"></script>
-  <!-- MEDIASTREAMAPI HELPER -->
+  <!-- MediaStreamApi HELPER -->
   <script src="thirdparty/WebARRocks/helpers/WebARRocksMediaStreamAPIHelper.js"></script>
+  <!-- Project modules definitions -->
+  <script type="module" src="src/definitions.js"></script>
+  <!-- Device stabilization HELPER -->
+  <script src="thirdparty/WebARRocks/helpers/stabilizers/WebARRocksThreeStabilizer.js"></script>
+  <!-- Device orientation HELPER -->
+  <script src="thirdparty/WebARRocks/helpers/DeviceOrientationHelper.js"></script>
+  <!-- ThreeJS WebARRocks HELPER -->
+  <script src="thirdparty/WebARRocks/helpers/WebARRocksObjectThreeHelper.js"></script>
   <!-- html2canvas for screenshot -->
   <script src="thirdparty/htlm2canvas/html2canvas.min.js"></script>
   <!-- MAIN SCRIPT : -->
-  <script src="src/main.js"></script>
+  <script type="module" src="src/main.js"></script>
 </head>
 
 <body onload="main()">
@@ -33,7 +41,11 @@
     </div>
 
     <!-- Canvas для AR -->
-    <canvas id="camera-view"></canvas>
+    <div id="user-view">
+      <canvas id='ARCanvas'></canvas>
+      <canvas id='threeCanvas'></canvas>
+      <video id='webcamVideo'></video>
+    </div>
 
     <!-- Вспышка -->
     <div class="flash-overlay" id="flashOverlay"></div>
